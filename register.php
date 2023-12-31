@@ -4,6 +4,7 @@
 <head>
     <title>Registrasi Pasien</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="asset/images/logo_dinus.png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- CSS Custom untuk Halaman Registrasi -->
     <style>

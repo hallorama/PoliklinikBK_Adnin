@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="asset/images/logo_dinus.png">
     <title>Poliklinik</title>
     <style>
         body,
@@ -166,7 +167,7 @@
     <!-- Section 1: Navbar -->
     <section class="navigation-bar">
         <div class="navbar">
-            <a href="#home">Poliklinik Sehat Ambal Waras</a>
+            <a href="#home">Poliklinik BK Adnin</a>
         </div>
     </section>
 
@@ -215,7 +216,7 @@
                                 <img src="asset/images/testimoni.png" alt="Client 1">
                             </div>
                             <div class="client_info">
-                                <h6>Nopal</h6>
+                                <h6>Adnin</h6>
                                 <p>Semarang</p>
                             </div>
                         </div>
@@ -230,7 +231,7 @@
                                 <img src="asset/images/testimoni.png" alt="Client 2">
                             </div>
                             <div class="client_info">
-                                <h6>Ilyas</h6>
+                                <h6>Ramadhani</h6>
                                 <p>Semarang</p>
                             </div>
                         </div>
