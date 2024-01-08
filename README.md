@@ -8,4 +8,4 @@ Project ini merupakan tugas Poliklinik BK untuk memenuhi syarat ujian sertifikas
 
 ## Cara Run Aplikasi
 
-`php artisan serve`
+`di localhost`
