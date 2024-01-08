@@ -9,3 +9,14 @@ Project ini merupakan tugas Poliklinik BK untuk memenuhi syarat ujian sertifikas
 ## Cara Run Aplikasi
 
 `di localhost`
+
+## Username dan Password
+
+`username Admin : AdminDhani`
+`password Admin : 123`
+
+`username Dokter : Adnin`
+`password Dokter : Adnin`
+
+`username Pasien : Rama`
+`password Dokter : 123`
