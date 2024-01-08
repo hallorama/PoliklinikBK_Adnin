@@ -208,7 +208,7 @@
         <div class="container text-right my-5 fade-in">
             <h1 style="font-size: 56px;"><b>Poliklinik Adn</b></h1>
             <h1 style="font-size: 36px;"><b>Kesehatan Anda, Prioritas Kami - Bersama Poliklinik ADN, Raih Hidup Sehat Setiap Hari!</b></h1>
-            <p style="font-size: 22px;">Bimbingan Karir 2023 Bidang Website</p>
+            <p style="font-size: 22px;">Bimbingan Karir 2024 Bidang Website</p>
         </div>
     </section>
 
