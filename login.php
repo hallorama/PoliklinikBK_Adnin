@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="icon" type="image/png" href="asset/images/logo_dinus.png">
+    <link rel="icon" type="image/png" href="assets/images/logo1.png">
     <!-- Tambahan CSS -->
     <style>
         body {
             padding-top: 100px;
             background-color: #f8f9fa;
-            background-image: url('asset/images/background-login.png'); /* A background image for a pleasant look */
+            background-image: url('assets/images/background-login.png'); /* A background image for a pleasant look */
             background-size: 120%;
             background-position: center;
         }
@@ -33,17 +34,20 @@
             <div class="card">
                 <div class="card-body">
                     <div class="text-center mb-4 logo-image">
-                        <img src="asset/images/logo.png" alt="Logo" style="width : 150px;"> <!-- Logo or any image -->
+                        <img src="assets/images/logo.png" alt="Logo" style="width : 150px;"> <!-- Logo or any image -->
+                        <h5>Login Dokter</h5>
                     </div>
-                    <form id="loginForm">
+                    <form action="pages/login/checkLogin.php" method="post" id="loginForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" name="nama" id="nama" required>
+                            <input type="text" class="form-control" placeholder="Username" name="username" id="username" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="No Handphone" name="no_hp" id="no_hp" required>
+                            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
                         </div>
                         <div class="form-group">
-                            <button type="button" class="btn btn-primary btn-block" onclick="loginUser()">Login</button>
+                            <button type="submit" class="btn btn-block btn-success">
+                                Login
+                            </button>
                         </div>
                     </form>
 
@@ -52,44 +56,11 @@
             </div>
         </div>
     </div>
-    
 
-    <script>
-        function loginUser() {
-            var nama = document.getElementById('nama').value;
-            var no_hp = document.getElementById('no_hp').value;
-
-            // Kirim data ke PHP untuk proses login
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'process_login.php');
-            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    if (response.status === 'success') {
-                        // Handle login berhasil
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Login Berhasil!',
-                            text: response.welcome_message,
-                            timer: 3000,
-                            showConfirmButton: false
-                        }).then(function () {
-                            window.location.href = response.redirect_url;
-                        });
-                    } else {
-                        // Handle login gagal
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Login Gagal',
-                            text: response.message
-                        });
-                    }
-                }
-            };
-            var params = 'nama=' + nama + '&no_hp=' + no_hp;
-            xhr.send(params);
-        }
-    </script>
 </body>
+
+</html>
+</script>
+</body>
+
 </html>

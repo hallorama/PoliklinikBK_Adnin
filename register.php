@@ -15,7 +15,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #a8dadc;
+            background-color: #d3fff3;
         }
 
         .login-container {
@@ -99,12 +99,12 @@
 <body>
     <div class="login-container">
         <div class="left-container">
-            <img src="assets/images/hospital.png" alt="Login Image">
+            <img src="assets/images/reg.jpg" alt="Login Image">
         </div>
         <div class="right-container">
             <div class="login-form">
                 <h2>Registrasi Pasien</h2>
-                <form id="registerForm">
+                <form action="pages/register/checkRegister.php" method="post" id="registerForm">
                     <label for="nama">Nama:</label>
                     <input type="text" id="nama" name="nama" required>
 
@@ -112,60 +112,26 @@
                     <input type="text" id="alamat" name="alamat" required>
 
                     <label for="no_ktp">Nomor KTP:</label>
-                    <input type="text" id="no_ktp" name="no_ktp" required>
+                    <input type="number" id="no_ktp" name="no_ktp" required>
 
                     <label for="no_hp">Nomor HP:</label>
-                    <input type="text" id="no_hp" name="no_hp" required>
+                    <input type="number" id="no_hp" name="no_hp" required>
 
-                    <button type="button" class="btn btn-primary btn-block" onclick="registerUser()">Register</button>
+                    <label for="no_hp">Password :</label>
+                    <input type="password" class="form-control" name="password" required>
+
+                    <button type="submit" class="btn btn-block btn-primary">
+                        Register
+                    </button>
                 </form>
 
                 <div class="register-link">
-                    <p><b>Sudah punya akun?</b> <a href="login.php">Login disini</a></p>
+                    <p><b>Sudah punya akun?</b> <a href="loginUser.php">Login disini</a></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        function registerUser() {
-            var nama = document.getElementById('nama').value;
-            var alamat = document.getElementById('alamat').value;
-            var no_ktp = document.getElementById('no_ktp').value;
-            var no_hp = document.getElementById('no_hp').value;
-
-            // Kirim data ke PHP untuk proses registrasi
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'process_register.php');
-            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    if (response.success) {
-                        // Handle registrasi berhasil
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Registrasi Berhasil!',
-                            text: response.message,
-                            timer: 3000,
-                            showConfirmButton: false
-                        }).then(function () {
-                            window.location.href = 'login.php';
-                        });
-                    } else {
-                        // Handle registrasi gagal
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Registrasi Gagal',
-                            text: response.message
-                        });
-                    }
-                }
-            };
-            var params = 'nama=' + nama + '&alamat=' + alamat + '&no_ktp=' + no_ktp + '&no_hp=' + no_hp;
-            xhr.send(params);
-        }
-    </script>
 </body>
 
 </html>
